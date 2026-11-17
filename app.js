@@ -35,7 +35,7 @@ app.post("/login", async function (req, res) {
 
   if (typeof email !== "string" || typeof password !== "string") {
     return res.status(400).render("partials/login", {
-      error: "Skriv inn e-post og passord.",
+      error: "Skriv inn brukernavn og passord.",
       email: "",
     });
   }
@@ -47,7 +47,7 @@ app.post("/login", async function (req, res) {
 
     if (!user || !(await argon2.verify(user.passwordHash, password))) {
       return res.status(401).render("partials/login", {
-        error: "E-post eller passord er feil.",
+        error: "Brukernavn eller passord er feil.",
         email: cleanEmail,
       });
     }
@@ -86,14 +86,10 @@ app.post("/register-user", async function (req, res) {
     typeof password !== "string" ||
     typeof repeatPassword !== "string"
   ) {
-    return res.status(400).send("Skriv inn e-post og passord.");
+    return res.status(400).send("Skriv inn brukernavn og passord.");
   }
 
   const cleanEmail = email.trim().toLowerCase();
-
-  if (!/^\S+@\S+\.\S+$/.test(cleanEmail)) {
-    return res.status(400).send("Skriv inn en gyldig e-postadresse.");
-  }
 
   if (password !== repeatPassword) {
     return res.status(400).send("Passordene er ikke like.");
@@ -109,7 +105,7 @@ app.post("/register-user", async function (req, res) {
     res.redirect("/login");
   } catch (error) {
     if (error.code === 11000) {
-      return res.status(409).send("Denne e-postadressen har allerede en konto.");
+      return res.status(409).send("Brukernavnet er allerede brukt.");
     }
 
     console.error("Registrering feilet:", error.message);

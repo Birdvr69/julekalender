@@ -3,8 +3,8 @@
     <body>
         <h1>register-user</h1>
         <form action="/register-user" method="POST">
-            <label for="email">email</label>
-            <input type="email" name="email" id="email" required>
+            <label for="email">Brukernavn eller e-post</label>
+            <input type="text" name="email" id="email" autocomplete="username" required>
 
             <label for="password">password</label>
             <input type="password" name="password" id="password" minlength="8" required>
