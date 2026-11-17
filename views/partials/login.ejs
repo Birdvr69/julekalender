@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="no">
+  <%- include("head") %>
+  <body>
+    <main class="auth-page">
+      <section class="auth-card">
+        <h1>Logg inn</h1>
+        <% if (error) { %>
+          <p class="auth-error" role="alert"><%= error %></p>
+        <% } %>
+        <form action="/login" method="post">
+          <label for="email">E-post</label>
+          <input id="email" name="email" type="email" value="<%= email %>" autocomplete="email" required>
+
+          <label for="password">Passord</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+          <button type="submit">Logg inn</button>
+        </form>
+        <p>Har du ikke konto? <a href="/register-user">Registrer deg</a></p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+    <%- include("head") %>
+    <%- include("nav") %>
+    <body>
+        <h1>register-user</h1>
+        <form action="/register-user" method="POST">
+            <label for="email">email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="password">password</label>
+            <input type="password" name="password" id="password" minlength="8" required>
+
+            <label for="repeatpassword">repeatpassword</label>
+            <input type="password" name="repeatpassword" id="repeatpassword" minlength="8" required>
+            <button>logg inn</button>
+<a href="/login">login</a>
+        </form>
+    </body>
