@@ -97,11 +97,6 @@
   margin-bottom: 24px;
 }
 
-.calendar-header h1 {
-  margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 6vw, 3rem);
-}
 
 .calendar-header p {
   margin: 0;
@@ -114,7 +109,6 @@
   color: #fffaf0;
   background: #a63c39;
   cursor: pointer;
-  font: inherit;
 }
 
 .door-grid {
@@ -147,10 +141,18 @@
 }
 
 
-.box {
-  width: 100px;
-  height: 100px;
-  border: 2px solid black;
-  display: inline-block;
-  margin: 5px;
+.calendar-box {
+    width: 150px;
+    height: 150px;
+    background-color: darkred;
+    border: 3px solid gold;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
 }
