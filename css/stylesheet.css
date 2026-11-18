@@ -1,10 +1,5 @@
-:root {
-  color-scheme: light;
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  color: #fffaf0;
-  background: #102b38;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+body{ 
+  background :rgb(0, 60, 0)
 }
 
 * {
@@ -32,8 +27,6 @@
 
 .auth-card h1 {
   margin: 0 0 24px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
 }
 
 .auth-card label {
@@ -97,6 +90,15 @@
   margin-bottom: 24px;
 }
 
+.calendar-grid {
+  width: min(100%, 1100px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
 
 .calendar-header p {
   margin: 0;
@@ -155,4 +157,67 @@
     color: white;
     font-size: 25px;
     cursor: pointer;
+}
+
+.calendar-box.open {
+    width: auto;
+    height: auto;
+    min-height: 180px;
+    grid-column: span 2;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 16px;
+    text-align: left;
+    cursor: default;
+}
+
+.calendar-box.question-box {
+    height: auto;
+    min-height: 150px;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.calendar-box.question-box p {
+    margin: 0;
+}
+
+.calendar-question-options {
+    display: grid;
+    gap: 6px;
+}
+
+.calendar-question-options button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid gold;
+    border-radius: 6px;
+    color: #17252a;
+    background: #fffaf0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.calendar-close-button {
+    padding: 8px;
+    border: 1px solid gold;
+    border-radius: 6px;
+    color: #fffaf0;
+    background: #a63c39;
+    cursor: pointer;
+    font: inherit;
+}
+
+.calendar-question-result {
+    margin: 0;
+}
+
+.calendar-box:focus-visible {
+    outline: 3px solid #fffaf0;
+    outline-offset: 3px;
 }

@@ -4,9 +4,7 @@ En digital julekalender laget med Node.js, Express, EJS og MongoDB.
 
 ## Status
 
-Jeg har laget en oppstart som fungerer greit. Neste steg er å fylle de 24 div-boksene med tekst og annet innhold.
-ikke noe admind dritt endå bare vent du snart kommer det m
-onica
+skal at spørsmålene skal vises alle sammen
 ## Starte prosjektet
 
 1. Kjør `npm install`.

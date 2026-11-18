@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="no">
   <%- include("head") %>
+  <%- include('nav.ejs') %>
   <body>
     <main class="calendar-page">
       <header class="calendar-header">
@@ -12,14 +13,16 @@
           <button class="logout-button" type="submit">Logg ut</button>
         </form>
       </header>
-      </section>
-    </main>
-    <div class="calendar-box">1</div>
-<div class="calendar-box">2</div>
+      <div class="calendar-grid">
+    <div class="calendar-box" id="door-1" role="button" tabindex="0">1</div>
+
+<div class="calendar-box question-box">
+  <strong>2</strong></div>
 
 <div class="calendar-box">3</div>
 
 <div class="calendar-box">4</div>
+
 <div class="calendar-box">5</div>
 
 <div class="calendar-box">6</div>
@@ -58,5 +61,9 @@
 
 <div class="calendar-box">23</div>
 <div class="calendar-box">24</div>
+      </div>
+    </main>
+    <script src="/js/opendoor.js" defer></script>
+    <script src="/js/closedoor.js" defer></script>
   </body>
 </html>
