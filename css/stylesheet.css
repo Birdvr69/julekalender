@@ -1,10 +1,5 @@
-:root {
-  color-scheme: light;
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  color: #fffaf0;
-  background: #102b38;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+body{ 
+  background :rgb(0, 60, 0)
 }
 
 * {
